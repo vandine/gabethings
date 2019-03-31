@@ -1,7 +1,7 @@
 /* CSS files add styling rules to your content */
 
 @font-face{
-  font-family: "Raleway";
+  font-family: Raleway;
   src: url('https://fonts.googleapis.com/css?family=Raleway:200');
 }
 
@@ -10,8 +10,21 @@ body {
   font-style: regular; 
 }
 
+.container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
 h1 {
-  font-size: 24px;
-  
-  
+  font-family: "Raleway";
+  font-size: 24px; 
+}
+
+.pagelist{
+  font-family: "Raleway";
+  font-size: 18px;
+  font-style: bold;
+  width: 200px;
+  height: 20px;
 }
