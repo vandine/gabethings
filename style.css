@@ -1,11 +1,17 @@
 /* CSS files add styling rules to your content */
 
+@font-face{
+  font-family: "Raleway";
+  src: url('https://fonts.googleapis.com/css?family=Raleway:200');
+}
+
 body {
-  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
-  margin: 2em;
+  font-family: "Raleway";
+  font-style: regular; 
 }
 
 h1 {
-  font-style: italic;
-  color: #373fff;
+  font-size: 24px;
+  
+  
 }
