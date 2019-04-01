@@ -35,8 +35,12 @@ function makeBlurb(blurb){
   return htmlBlurb;
 }
 
+$(".pagelist").focusout(){
+  
+}
+
 function makePicLink(link){
-  var htmlLink = "<a href='https://imgur.com/'><img src="+link+" style='width:100%;' class='proj-img'></a>"
+  var htmlLink = "<a href='https://imgur.com/' target='_blank'><img src="+link+" style='width:100%;' class='proj-img'></a>"
   return htmlLink
   }
 
