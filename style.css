@@ -37,15 +37,25 @@ h1 {
   flex-direction: column;
 }
 
+.proj-img{
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  object-position: 20% 0;
+  border-radius: 5px 5px 0 0;
+}
+
+
 .proj-card{
   
   font-family: 'Raleway';
-  box-shadow: 6px 6px 8px 0 rgba(0,0,0,0.3);
-  transition: 0.3s;
-  height: auto;
+  border-radius: 5px;
+  box-shadow: 10px 6px 8px 0 rgba(.6,0,0,0.3);
+  transition: 0.1s;
+  height: 100%;
   width: 300px;
 }
 
 .proj-card:hover{
-  box-shadow: 6px 6px 20px 0 rgba(0,0,0,0.4);
+  box-shadow: 10px 6px 20px 0 rgba(0,0,0,0.4);
 }
