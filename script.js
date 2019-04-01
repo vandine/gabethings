@@ -1,14 +1,14 @@
 //dummy tags
-var pages = [["words", "Test Words", "a test words post...", "https://imgur.com/", "https://pbs.twimg.com/profile_images/834978723149447172/-pe9YWrw_400x400.jpg"], 
-             ["pictures", "Test Pictures", "a test pictures post...", "https://imgur.com/", "https://pbs.twimg.com/profile_images/834978723149447172/-pe9YWrw_400x400.jpg"],
-             ["sounds", "Test Sounds", "a test sounds post...", "https://imgur.com/", "https://pbs.twimg.com/profile_images/834978723149447172/-pe9YWrw_400x400.jpg"]];
+var pages = [["word", "Test Words", "a test words post...", "https://imgur.com/", "https://pbs.twimg.com/profile_images/834978723149447172/-pe9YWrw_400x400.jpg"], 
+             ["picture", "Test Pictures", "a test pictures post...", "https://imgur.com/", "https://pbs.twimg.com/profile_images/834978723149447172/-pe9YWrw_400x400.jpg"],
+             ["sound", "Test Sounds", "a test sounds post...", "https://imgur.com/", "https://pbs.twimg.com/profile_images/834978723149447172/-pe9YWrw_400x400.jpg"]];
 
 function search(){
   
   var searchVal = $(".pagelist").val();
   
   for(var i=0; i < pages.length; i++){
-    if(pages[i][0].includes(searchVal)){
+    if(searchVal !== "" && pages[i][0].includes(searchVal)){
        $(".results").append(makeCard(pages[i][1], pages[i][2], pages[i][3]));
     }
     else{

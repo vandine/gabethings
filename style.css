@@ -76,10 +76,17 @@ h1 {
   align-content: flex-start;
 }
 
-.pagelist{
-  width: 200px;
+.search{
+  width: 400px;
   
 }
+
+.go{
+  height: 200px;
+
+.pagelist{
+  width: 200px;
+  font-size: 16px;
 
 .pagelist:focus{
   width: 25%;
