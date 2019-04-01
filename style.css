@@ -75,3 +75,8 @@ h1 {
   flex-wrap: wrap;
   align-content: flex-start;
 }
+
+.page-list{
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
