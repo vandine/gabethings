@@ -6,10 +6,12 @@ var pages = [["word", "Test Words", "a test words post...", "https://imgur.com/"
 function search(){
   
   var searchVal = $(".pagelist").val();
+  alert("its happening!");
   
-  for(var i=0; i < pages.length; i++){
-    //this should really 
-    if(searchVal.length > 3 && pages[i][0].includes(searchVal)){
+  for(var i=0; i < pages.length+1; i++){
+    //this should really also be removing results that dont match lol
+    
+    if(pages[i][0].includes(searchVal)){
        $(".results").append(makeCard(pages[i][1], pages[i][2], pages[i][3]));
     }
     else{

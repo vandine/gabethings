@@ -85,11 +85,6 @@ h1 {
   align-content: flex-start;
 }
 
-.search{
-  width: 400px;
-  
-}
-
 .go{
   height: 30px;
   font-family: 'Raleway';
@@ -98,6 +93,7 @@ h1 {
 .pagelist{
   width: 200px;
   font-size: 16px;
+  transition: width 0.18s ease-in-out;
 }
 
 .pagelist:focus{
@@ -105,13 +101,8 @@ h1 {
   outline: none !important;
   border:2px solid #ffccff;
   box-shadow: 0 0 10px #ffccff;
-  transition: width 0.18s ease-in-out;
 }
 
-.pagelist:focusout{
-  width: 200px;
-  transition: width 0.18s ease-in-out;
-}
 
 
 
