@@ -76,7 +76,16 @@ h1 {
   align-content: flex-start;
 }
 
-.page-list{
-  -webkit-transition: width 0.4s ease-in-out;
-  transition: width 0.4s ease-in-out;
+.pagelist{
+  width: 200px;
+  
 }
+
+.pagelist:focus{
+  width: 25%;
+  transition: width 0.18s ease-in-out;
+}
+
+
+
+
