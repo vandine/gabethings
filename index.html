@@ -21,15 +21,15 @@
       <h1 class="intro">
       Hi. What are you looking for?
       </h1>
-    <input type="name" name="pages" placeholder="[insert examples]" class="pagelist">
+    <input type="name" onkeyup="search()" name="pages" placeholder="[insert examples]" class="pagelist">
       
     </div>
     <div class="spacer">
       
     </div>
     
-    <span class="results">
-      <div class="proj-card">
+    <ul class="results">
+      <li class="proj-card">
         <img src="https://pbs.twimg.com/profile_images/834978723149447172/-pe9YWrw_400x400.jpg" style="width:100%;" class="proj-img">
           <div class="proj-info">
             <h3>
@@ -39,8 +39,8 @@
               a test project...
             </p>      
           </div>
-      </div>
-    </span>
+      </li>
+    </ul>
     <!-- include the Glitch button to show what the webpage is about and
           to make it easier for folks to view source and remix -->
     <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
