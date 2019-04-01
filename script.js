@@ -7,6 +7,7 @@ function search(){
   var searchVal = $(".pagelist").val();
   
   for(var i=0; i < pages.length();i++){
+    console.log(pages[i][0]);
     if(pages[i][0].includes(searchVal)){
        $(".results").append(makeCard(pages[i][1], pages[i][2]));
       alert("appended " + pages[i][0] + "to search results.");
@@ -31,6 +32,11 @@ function makeName(name){
 function makeBlurb(blurb){
   var htmlBlurb = "<p>"+blurb+"</p>";
   return htmlBlurb;
+}
+
+function test(){
+  var x = $(".pagelist").val();
+  x.value = x.value.toUpperCase();
 }
 
 
