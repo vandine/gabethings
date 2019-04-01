@@ -93,6 +93,14 @@ h1 {
 
 .pagelist:focus{
   width: 25%;
+  outline: none !important;
+  border:1px solid red;
+  box-shadow: 0 0 10px #719ECE;
+  transition: width 0.18s ease-in-out;
+}
+
+.pagelist:focusout{
+  width: 200px;
   transition: width 0.18s ease-in-out;
 }
 

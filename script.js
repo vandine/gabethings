@@ -33,11 +33,8 @@ function makeName(name){
 function makeBlurb(blurb){
   var htmlBlurb = "<p>"+blurb+"</p>";
   return htmlBlurb;
-}
-
-$(".pagelist").focusout(){
-  
-}
+} 
+ 
 
 function makePicLink(link){
   var htmlLink = "<a href='https://imgur.com/' target='_blank'><img src="+link+" style='width:100%;' class='proj-img'></a>"
