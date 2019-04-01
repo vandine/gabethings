@@ -31,17 +31,21 @@ h1 {
   height: 200px;
 }
 
-.proj-card{
+.results{
   display: flex;
   align-items: center;
   flex-direction: column;
-  font-family: 'Raleway';
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
 }
 
-.proj-info{
-  display:flex;
-  align-items: left;
-  flex-direction: column;
+.proj-card{
+  
+  font-family: 'Raleway';
+  box-shadow: 6px 6px 8px 0 rgba(0,0,0,0.3);
+  transition: 0.3s;
+  height: 200px;
+  width: 300px;
+}
+
+.proj-card:hover{
+  box-shadow: 6px 6px 20px 0 rgba(0,0,0,0.4);
 }
