@@ -10,10 +10,10 @@
 }
 
 @font-face {
-  font-family: 'Josefin';
+  font-family: 'Josefin Sans';
   font-style: normal;
   font-weight: 300;
-  src: local('Josefin Sans Light'), local('JosefinSans-Light'), url(https://fonts.gstatic.com/s/josefinsans/v13/Qw3FZQNVED7rKGKxtqIqX5Ecpl5tdV0hoJky_MiS.woff2) format('woff2');
+  src: url(https://fonts.gstatic.com/s/josefinsans/v13/Qw3FZQNVED7rKGKxtqIqX5Ecpl5tdV0hoJky_MiS.woff2) format('woff2');
   unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 
@@ -24,15 +24,16 @@
 }
 
 h1 {
-  font-family: 'Josefin', "Arial", "sans-serif" !important;
-  font-style: normal;
+  font-family: 'Josefin Sans', "Arial", "sans-serif" !important;
+  font-style: light;
 }
 
 .pagelist{
-  font-family: 'Josefin';
+  font-family: 'Josefin Sans';
   font-size: 20px;
   height: 25px;
   width: 200px;
+  padding: 5px;
 }
 
 .spacer{
@@ -56,7 +57,7 @@ h1 {
 
 .proj-card{
   
-  font-family: 'Raleway';
+  font-family: 'Josefin Sans';
   border-radius: 5px;
   box-shadow: 10px 6px 8px 0 rgba(.6,0,0,0.3);
   transition: 0.1s;

@@ -8,7 +8,8 @@ function search(){
   var searchVal = $(".pagelist").val();
   
   for(var i=0; i < pages.length; i++){
-    if(searchVal !== "" && pages[i][0].includes(searchVal)){
+    //this should really 
+    if(searchVal.length > 3 && pages[i][0].includes(searchVal)){
        $(".results").append(makeCard(pages[i][1], pages[i][2], pages[i][3]));
     }
     else{
