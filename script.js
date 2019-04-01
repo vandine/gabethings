@@ -6,12 +6,12 @@ var pages = [["word", "Test Words", "a test words post...", "https://imgur.com/"
 function search(){
   
   var searchVal = $(".pagelist").val();
-  alert("its happening!");
   
-  for(var i=0; i < pages.length+1; i++){
+  
+  for(var i=0; i < pages.length; i++){
     //this should really also be removing results that dont match lol
     
-    if(pages[i][0].includes(searchVal)){
+    if(searchVal.length > 3 && pages[i][0].includes(searchVal)){
        $(".results").append(makeCard(pages[i][1], pages[i][2], pages[i][3]));
     }
     else{
@@ -43,11 +43,6 @@ function makePicLink(link){
   var htmlLink = "<a href='https://imgur.com/' target='_blank'><img src="+link+" style='width:100%;' class='proj-img'></a>"
   return htmlLink
   }
-
-$(".pagelist").focus(function(){
-  $(".pagelist").css("placeholder", "words, pictures, sounds, meaning....");
-}
-
   
 
 
