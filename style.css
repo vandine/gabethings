@@ -1,13 +1,12 @@
  /* CSS files add styling rules to your content */
 
-@font-face{
-  font-family: Raleway;
-  src: url('https://fonts.googleapis.com/css?family=Raleway:200');
-}
-
-body {
-  font-family: "Raleway";
-  font-style: regular; 
+/* latin-ext */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Raleway Light'), local('Raleway-Light'), url(https://fonts.gstatic.com/s/raleway/v13/1Ptrg8zYS_SKggPNwIYqWqhPANqczVsq4A.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 
 .container{
@@ -17,14 +16,11 @@ body {
 }
 
 h1 {
-  font-family: "Raleway";
+  font-family: 'Raleway';
+  font-style: regular;
   font-size: 24px; 
 }
 
 .pagelist{
-  font-family: "Raleway";
-  font-size: 18px;
-  font-style: bold;
-  width: 200px;
-  height: 20px;
+  font-family: 'Raleway';
 }
