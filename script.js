@@ -41,6 +41,10 @@ function makePicLink(link){
   return htmlLink
   }
 
+$(".pagelist").focus(function(){
+  $(".pagelist").css("placeholder", "words, pictures, sounds, meaning....");
+}
+
   
 
 
