@@ -39,5 +39,10 @@ function test(){
   x.value = x.value.toUpperCase();
 }
 
+$(".dumb").click(function(){
+    alert(pages[0][1]);
+}
+  
+
 
   
