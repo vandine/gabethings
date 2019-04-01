@@ -9,7 +9,7 @@ function search(){
   
   for(var i=0; i < pages.length; i++){
     if(pages[i][0].includes(searchVal)){
-       $(".results").append(makeCard(pages[i][1], pages[i][2]));
+       $(".results").append(makeCard(pages[i][1], pages[i][2], pages[i][3]));
     }
     else{
       return 0;
@@ -20,8 +20,8 @@ function search(){
 
 
 //generate cards for search testing
-function makeCard(name, blurb){
-  return "<li class='proj-card'>"+makeName(name)+makeBlurb(blurb)+"</li>"
+function makeCard(name, blurb, link){
+  return "<li class='proj-card'>"+makePicLink(link)+makeName(name)+makeBlurb(blurb)+"</li>"
 }
 
 
@@ -36,8 +36,9 @@ function makeBlurb(blurb){
 }
 
 function makePicLink(link){
-  var htmlLink = "<a href='"+link+"><img src="https://pbs.twimg.com/profile_images/834978723149447172/-pe9YWrw_400x400.jpg" style="width:100%;" class="proj-img">
-        </a>
+  var htmlLink = "<a href='https://imgur.com/'><img src="+link+" style='width:100%;' class='proj-img'></a>"
+  return htmlLink
+  }
 
   
 
