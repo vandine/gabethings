@@ -59,3 +59,18 @@ h1 {
 .proj-card:hover{
   box-shadow: 10px 6px 20px 0 rgba(0,0,0,0.4);
 }
+
+.proj-info{
+  padding-left: 10px;
+  padding-right: 10px;
+  line-height: .75;
+}
+
+.results{
+  width: 75%;
+  margin-left: 400px;
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
