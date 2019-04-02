@@ -1,7 +1,27 @@
+class tags {
+  constructor(tag1, tag2 = "", tag3 = ""){
+    this.tag1 = tag1;
+    this.tag2 = tag2;
+    this.tag3 = tag3;
+  }
+}
+  
+class card {
+  constructor(tags, name, description, link, image){
+    this.tags = tags(tags.tag1, tags.tag2, tags.tag3);
+    this.name = name;
+    this.description = description;
+    this.link = link;
+    this.image = image;
+  }
+}
+
+var testWordsCard = card(tags("word"), "Test Words", "a test words post...", "https://imgur.com/", "https://pbs.twimg.com/profile_images/834978723149447172/-pe9YWrw_400x400.jpg")
+var testSoundsCard = card(tags("sound"), "Test Sounds", "a test sounds post...", "https://imgur.com/", "https://pbs.twimg.com/profile_images/834978723149447172/-pe9YWrw_400x400.jpg")
+var testPicturesCard = card(tags("picture"), "Test Pictures", "a test pictures post...", "https://imgur.com/", "https://pbs.twimg.com/profile_images/834978723149447172/-pe9YWrw_400x400.jpg")
+
 //dummy tags
-var pages = [["word", "Test Words", "a test words post...", "https://imgur.com/", "https://pbs.twimg.com/profile_images/834978723149447172/-pe9YWrw_400x400.jpg"], 
-             ["picture", "Test Pictures", "a test pictures post...", "https://imgur.com/", "https://pbs.twimg.com/profile_images/834978723149447172/-pe9YWrw_400x400.jpg"],
-             ["sound", "Test Sounds", "a test sounds post...", "https://imgur.com/", "https://pbs.twimg.com/profile_images/834978723149447172/-pe9YWrw_400x400.jpg"]];
+var pages = [testWordsCard, testSoundsCard, ];
 
 function search(){
   
