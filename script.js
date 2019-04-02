@@ -29,24 +29,22 @@ function search(){
     //this should really also be removing results that dont match lol
     
     if(searchVal.length > 3 && pages[i].tags.includes(searchVal)){
+       console.log("added one.");
        resultsList.set(pages[i].name, makeCard(pages[i].name, pages[i].description, pages[i].image));
     }
-    //else if(!pages[i].tags.includes(searchVal)&& resultsList.has(searchVal)){
-      //resultsList.delete(pages[i].name);
-    //}
+    else if(!pages[i].tags.includes(searchVal)&& resultsList.has(searchVal)){
+      console.log("removed one.");
+      resultsList.delete(pages[i].name);
+    }
 }
-  for(var i=0; i< resultsList.length; i++){
-  
-  for (let [k, v] of myMap) {
-    $(".results").append(element);
+var showResults = "";
+  for (let [name, card] of resultsList) {
+    showResults+= card;
 }
-}
-  
+  $(".results").html(showResults);
+  console.log(resultsList);
 }
 
-for(var i=0; i< resultsList.length; i++){
-  $(".results").append(resultsList[i][1]);
-}
 
 
 //generate cards for search testing
