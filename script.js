@@ -49,7 +49,7 @@ var showResults = "";
 
 //generate cards for search testing
 function makeCard(name, blurb, pic, link){
-  return "<li class='proj-card'>"+makePicLink(pic, link)+makeName(name)+makeBlurb(blurb)+"</li>"
+  return "<a href='"+link+"' target='_blank'><li class='proj-card'>"+makePicLink(pic)+makeName(name)+makeBlurb(blurb)+"</li></a>"
 }
 
 
@@ -62,10 +62,9 @@ function makeBlurb(blurb){
   var htmlBlurb = "<p>"+blurb+"</p>";
   return htmlBlurb;
 } 
- 
-//for now it links to imgur whether you want it to or not. i hate it too. die mad about it
-function makePicLink(pic, link){
-  var htmlLink = "<a href='"+link+"' target='_blank'><img src="+pic+" style='width:100%;' class='proj-img'></a>"
+
+function makePicLink(pic){
+  var htmlLink = "<img src="+pic+" style='width:100%;' class='proj-img'>"
   return htmlLink
   }
 
