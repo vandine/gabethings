@@ -10,15 +10,15 @@ class card {
   }
 }
 
-var testWordsCard = new card(["word"], "Test Words", "a test words post...", "https://imgur.com/", "https://pbs.twimg.com/profile_images/834978723149447172/-pe9YWrw_400x400.jpg")
-var testSoundsCard = new card(["sound"], "Test Sounds", "a test sounds post...", "https://imgur.com/", "https://pbs.twimg.com/profile_images/834978723149447172/-pe9YWrw_400x400.jpg")
-var testPicturesCard = new card(["picture"], "Test Pictures", "a test pictures post...", "https://imgur.com/", "https://pbs.twimg.com/profile_images/834978723149447172/-pe9YWrw_400x400.jpg")
+var testWordsCard = new card(["words", "dogs", "cats", "trees"], "Test Words", "a test words post...", "https://imgur.com/", "https://pbs.twimg.com/profile_images/834978723149447172/-pe9YWrw_400x400.jpg")
+var testSoundsCard = new card(["sounds", "trees", "rocks"], "Test Sounds", "a test sounds post...", "https://imgur.com/", "https://pbs.twimg.com/profile_images/834978723149447172/-pe9YWrw_400x400.jpg")
+var testPicturesCard = new card(["tax", "fraud", "kakashi"], "Your Fave Commits Tax Fraud", "tax fraud...", "https://www.tumblr.com/tagged/your-fave-commits-tax-fraud", "https://66.media.tumblr.com/adeef6769cd9e4d80256be48958eb539/tumblr_inline_pkf896sTm41vcbfc4_540.jpg")
 var resultsList = new Map();
 
 //dummy tags
 var pages = [testWordsCard, testSoundsCard, testPicturesCard];
 
-
+//find pages with tags matching things
 function search(){
   
   
@@ -28,11 +28,11 @@ function search(){
   for(var i=0; i < pages.length; i++){
     //this should really also be removing results that dont match lol
     
-    if(searchVal.length > 3 && pages[i].tags.includes(searchVal)){
+    if(pages[i].tags.includes(searchVal)){
        console.log("added one.");
        resultsList.set(pages[i].name, makeCard(pages[i].name, pages[i].description, pages[i].image));
     }
-    else if(!pages[i].tags.includes(searchVal)&& resultsList.has(searchVal)){
+    else if(!(Object.keys(resultsList).includes(searchVal))){
       console.log("removed one.");
       resultsList.delete(pages[i].name);
     }
@@ -64,8 +64,8 @@ function makeBlurb(blurb){
 } 
  
 //for now it links to imgur whether you want it to or not. i hate it too. die mad about it
-function makePicLink(link){
-  var htmlLink = "<a href='https://imgur.com/' target='_blank'><img src="+link+" style='width:100%;' class='proj-img'></a>"
+function makePicLink(pic, link){
+  var htmlLink = "<a href='"+link"' target='_blank'><img src="+pic+" style='width:100%;' class='proj-img'></a>"
   return htmlLink
   }
 
