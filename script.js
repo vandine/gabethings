@@ -18,7 +18,7 @@ var resultsList = new Map();
 //dummy tags
 var pages = [testWordsCard, testSoundsCard, testPicturesCard];
 
-//find pages with tags matching things
+//find pages with tags matching things. worlds shittiest search function.
 function search(){
   
   
@@ -26,12 +26,12 @@ function search(){
   
   
   for(var i=0; i < pages.length; i++){
-    //this should really also be removing results that dont match lol
-    
+    //if theres a match, add it to the map
     if(pages[i].tags.includes(searchVal)){
        console.log("added one.");
-       resultsList.set(pages[i].name, makeCard(pages[i].name, pages[i].description, pages[i].image));
+       resultsList.set(pages[i].name, makeCard(pages[i].name, pages[i].description, pages[i].image, pages[i].link));
     }
+    //if the map doesn't include the search value, remove the thing with a key matching the name of the card from the map
     else if(!(Object.keys(resultsList).includes(searchVal))){
       console.log("removed one.");
       resultsList.delete(pages[i].name);
@@ -48,8 +48,8 @@ var showResults = "";
 
 
 //generate cards for search testing
-function makeCard(name, blurb, link){
-  return "<li class='proj-card'>"+makePicLink(link)+makeName(name)+makeBlurb(blurb)+"</li>"
+function makeCard(name, blurb, pic, link){
+  return "<li class='proj-card'>"+makePicLink(pic, link)+makeName(name)+makeBlurb(blurb)+"</li>"
 }
 
 
@@ -65,7 +65,7 @@ function makeBlurb(blurb){
  
 //for now it links to imgur whether you want it to or not. i hate it too. die mad about it
 function makePicLink(pic, link){
-  var htmlLink = "<a href='"+link"' target='_blank'><img src="+pic+" style='width:100%;' class='proj-img'></a>"
+  var htmlLink = "<a href='"+link+"' target='_blank'><img src="+pic+" style='width:100%;' class='proj-img'></a>"
   return htmlLink
   }
 
