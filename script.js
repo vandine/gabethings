@@ -10,13 +10,18 @@ class card {
   }
 }
 
-var testWordsCard = new card(["words", "dogs", "cats", "trees"], "Test Words", "a test words post...", "https://imgur.com/", "https://pbs.twimg.com/profile_images/834978723149447172/-pe9YWrw_400x400.jpg")
-var testSoundsCard = new card(["sounds", "trees", "rocks"], "Test Sounds", "a test sounds post...", "https://imgur.com/", "https://pbs.twimg.com/profile_images/834978723149447172/-pe9YWrw_400x400.jpg")
-var testPicturesCard = new card(["tax", "fraud", "kakashi"], "Your Fave Commits Tax Fraud", "tax fraud...", "https://www.tumblr.com/tagged/your-fave-commits-tax-fraud", "https://66.media.tumblr.com/adeef6769cd9e4d80256be48958eb539/tumblr_inline_pkf896sTm41vcbfc4_540.jpg")
+var testWordsCard = new card(["words", "dogs", "cats", "trees"], "Test Words", "a test words post...", "https://imgur.com/", 
+                             "https://pbs.twimg.com/profile_images/834978723149447172/-pe9YWrw_400x400.jpg")
+var testSoundsCard = new card(["sounds", "trees", "rocks"], "Test Sounds", "a test sounds post...", "https://imgur.com/", 
+                              "https://pbs.twimg.com/profile_images/834978723149447172/-pe9YWrw_400x400.jpg")
+var testPicturesCard = new card(["tax", "fraud", "kakashi"], "Tax Fraud", "your fave...", 
+                                "https://www.tumblr.com/tagged/your-fave-commits-tax-fraud", "https://66.media.tumblr.com/adeef6769cd9e4d80256be48958eb539/tumblr_inline_pkf896sTm41vcbfc4_540.jpg")
+var testGayCard = new card(["gay", "kat", "kinnie", "reigen", "fraud"], "Sexy Raygun", "frankly, i'm disappointed.", "https://reigenenthusiast.tumblr.com/", 
+                             "https://pbs.twimg.com/media/DxPNggxV4AAQsz3.jpg")
 var resultsList = new Map();
 
 //dummy tags
-var pages = [testWordsCard, testSoundsCard, testPicturesCard];
+var pages = [testWordsCard, testSoundsCard, testPicturesCard, testGayCard];
 
 //find pages with tags matching things. worlds shittiest search function.
 function search(){
@@ -31,7 +36,7 @@ function search(){
        console.log("added one.");
        resultsList.set(pages[i].name, makeCard(pages[i].name, pages[i].description, pages[i].image, pages[i].link));
     }
-    //if the map doesn't include the search value, remove the thing with a key matching the name of the card from the map
+    //if the list of potential keys doesn't include the searched valu, remove the current c
     else if(!(Object.keys(resultsList).includes(searchVal))){
       console.log("removed one.");
       resultsList.delete(pages[i].name);
