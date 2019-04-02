@@ -61,6 +61,8 @@ function makePicLink(link){
   return htmlLink
   }
 
+resultsList.forEach(
+
 
 
 
