@@ -58,7 +58,7 @@ h1 {
   
   font-family: 'Josefin Sans';
   border-radius: 5px;
-  box-shadow: 10px 6px 8px 0;
+  box-shadow: 5px 6px 8px 0 rgba(0,0,0,0.1);
   transition: 0.1s;
   height: 100%;
   width: 300px;
