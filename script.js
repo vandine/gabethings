@@ -1,16 +1,8 @@
-var testTags = tags("a", "b", "c");
 
-console.log("gay");
-
-class tags {
-  constructor(tag1, tag2 = "", tag3 = ""){
-    this.tags = [tag1, tag2, tag3];
-  }
-}
   
 class card {
   constructor(tags, name, description, link, image){
-    this.tags = tags(tags.tag1, tags.tag2, tags.tag3);
+    this.tags = tags;
     this.name = name;
     this.description = description;
     this.link = link;
@@ -18,9 +10,9 @@ class card {
   }
 }
 
-var testWordsCard = card(tags("word"), "Test Words", "a test words post...", "https://imgur.com/", "https://pbs.twimg.com/profile_images/834978723149447172/-pe9YWrw_400x400.jpg")
-var testSoundsCard = card(tags("sound"), "Test Sounds", "a test sounds post...", "https://imgur.com/", "https://pbs.twimg.com/profile_images/834978723149447172/-pe9YWrw_400x400.jpg")
-var testPicturesCard = card(tags("picture"), "Test Pictures", "a test pictures post...", "https://imgur.com/", "https://pbs.twimg.com/profile_images/834978723149447172/-pe9YWrw_400x400.jpg")
+var testWordsCard = new card(["word"], "Test Words", "a test words post...", "https://imgur.com/", "https://pbs.twimg.com/profile_images/834978723149447172/-pe9YWrw_400x400.jpg")
+var testSoundsCard = new card(["sound"], "Test Sounds", "a test sounds post...", "https://imgur.com/", "https://pbs.twimg.com/profile_images/834978723149447172/-pe9YWrw_400x400.jpg")
+var testPicturesCard = new card(["picture"], "Test Pictures", "a test pictures post...", "https://imgur.com/", "https://pbs.twimg.com/profile_images/834978723149447172/-pe9YWrw_400x400.jpg")
 
 //dummy tags
 var pages = [testWordsCard, testSoundsCard, testPicturesCard];
@@ -36,9 +28,6 @@ function search(){
     
     if(searchVal.length > 3 && pages[i].tags.includes(searchVal)){
        $(".results").append(makeCard(pages[i].name, pages[i].description, pages[i].image));
-    }
-    else{
-      return 0;
     }
   
 }
@@ -66,7 +55,8 @@ function makePicLink(link){
   var htmlLink = "<a href='https://imgur.com/' target='_blank'><img src="+link+" style='width:100%;' class='proj-img'></a>"
   return htmlLink
   }
-  
+
+
 
 
   
