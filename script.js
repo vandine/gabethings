@@ -1,8 +1,10 @@
+var testTags = tags("a", "b", "c");
+
+console.log("gay");
+
 class tags {
   constructor(tag1, tag2 = "", tag3 = ""){
-    this.tag1 = tag1;
-    this.tag2 = tag2;
-    this.tag3 = tag3;
+    this.tags = [tag1, tag2, tag3];
   }
 }
   
@@ -21,9 +23,10 @@ var testSoundsCard = card(tags("sound"), "Test Sounds", "a test sounds post...",
 var testPicturesCard = card(tags("picture"), "Test Pictures", "a test pictures post...", "https://imgur.com/", "https://pbs.twimg.com/profile_images/834978723149447172/-pe9YWrw_400x400.jpg")
 
 //dummy tags
-var pages = [testWordsCard, testSoundsCard, ];
+var pages = [testWordsCard, testSoundsCard, testPicturesCard];
 
 function search(){
+  
   
   var searchVal = $(".pagelist").val();
   
@@ -31,8 +34,8 @@ function search(){
   for(var i=0; i < pages.length; i++){
     //this should really also be removing results that dont match lol
     
-    if(searchVal.length > 3 && pages[i][0].includes(searchVal)){
-       $(".results").append(makeCard(pages[i][1], pages[i][2], pages[i][3]));
+    if(searchVal.length > 3 && pages[i].tags.includes(searchVal)){
+       $(".results").append(makeCard(pages[i].name, pages[i].description, pages[i].image));
     }
     else{
       return 0;
