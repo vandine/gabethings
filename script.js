@@ -31,11 +31,21 @@ function search(){
     if(searchVal.length > 3 && pages[i].tags.includes(searchVal)){
        resultsList.set(pages[i].name, makeCard(pages[i].name, pages[i].description, pages[i].image));
     }
-    else if(!pages[i].tags.includes(searchVal)&& resultsList.has(searchVal)){
-      resultsList.delete(pages[i].name);
-    }
+    //else if(!pages[i].tags.includes(searchVal)&& resultsList.has(searchVal)){
+      //resultsList.delete(pages[i].name);
+    //}
+}
+  for(var i=0; i< resultsList.length; i++){
+  
+  for (let [k, v] of myMap) {
+    $(".results").append(element);
+}
+}
   
 }
+
+for(var i=0; i< resultsList.length; i++){
+  $(".results").append(resultsList[i][1]);
 }
 
 
@@ -61,7 +71,9 @@ function makePicLink(link){
   return htmlLink
   }
 
-resultsList.forEach(
+
+
+
 
 
 
